@@ -15,18 +15,18 @@
 <?php session_start(); ?>
 
 
-    <div style="margin-left:45px; margin-right:45px; width:100%;">
+    <div style="margin-left:45px; margin-right:45px; width:100%; position:relative;">
         <br/><br/>
-        <span class="user"><img src='<?= $_SESSION['avatar'] ?>' width='50' height='50'></span>
+        <span class="user"><img src='<?= $_SESSION['avatar'] ?>' width='50' height='50' align="left"></span>
         <br/>
-        Welcome <span class="user"><?= $_SESSION['username'] ?></span>
+        <H2> &ensp; Welcome <span class="user"><?= $_SESSION['username'] ?></span> !!!</H2>
         <br/><br/>
         <hr noshade>
-        <br/><br/>
-        <b>Achievements</b><br/>
+        <br/>
+        <b><H1>Achievements</H1></b>
         <span class="user"><?= $_SESSION['achievement'] ?></span>
-        <br/><br/>
-        <b>Projects</b><br/>
+        <br/><br/><hr>
+        <b><H1>Projects</H1></b>
         <ul>
         <li><span class="user"><?= $_SESSION['pr1'] ?></span>
         <li><span class="user"><?= $_SESSION['pr2'] ?></span>
@@ -34,17 +34,16 @@
         <li><span class="user"><?= $_SESSION['pr4'] ?></span>
         <li><span class="user"><?= $_SESSION['pr5'] ?></span>
         </ul>
-        <br/>
-        <b>Experience</b><br/>
+        <br/><hr>
+        <b><H1>Experience</H1></b>
         <ul>
         <li><span class="user"><?= $_SESSION['ex1'] ?></span>
         <li><span class="user"><?= $_SESSION['ex2'] ?></span>
         </ul>
-        <br/>
-        <b>Skills</b><br/>
+        <br/><hr>
+        <b><H1>Skills</H1></b>
         <span class="user"><?= $_SESSION['skills'] ?></span>
         <br/>
-        <br/><br/>
         
         <?php
         
@@ -57,7 +56,7 @@
         <hr>
         <br/>
         <div id="registered">
-            <span>Other registered students</span>
+            <span><H1>Other registered students</H1></span>
             <?php
             while($row = $result->fetch_assoc())
             {
